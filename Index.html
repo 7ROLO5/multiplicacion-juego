@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explota la Multiplicación</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <!-- Pantalla principal -->
+        <div id="main-menu" class="screen">
+            <h1>Explota la Multiplicación</h1>
+            <button onclick="startGame()">Jugar</button>
+            <button onclick="openSettings()">Configuraciones</button>
+        </div>
+
+        <!-- Pantalla del juego -->
+        <div id="game-screen" class="screen hidden">
+            <div id="problem-container">
+                <h2 id="problem"></h2>
+            </div>
+            <div id="bubble-container"></div>
+            <div id="score-container">
+                <span>Puntaje: <span id="score">0</span></span>
+                <span> Nivel: <span id="level">1</span></span>
+            </div>
+            <div id="timer-container">
+                <span id="timer">Tiempo: 10</span>
+            </div>
+        </div>
+
+        <!-- Pantalla de victoria o derrota -->
+        <div id="game-over" class="screen hidden">
+            <h2 id="game-over-message"></h2>
+            <p>Puntaje Final: <span id="final-score">0</span></p>
+            <button onclick="resetGame()">Volver a jugar</button>
+        </div>
+
+        <!-- Pantalla de transición -->
+        <div id="level-complete" class="screen hidden">
+            <h2>¡Nivel completado!</h2>
+            <button onclick="nextLevel()">Siguiente nivel</button>
+        </div>
+    </div>
+    <script src="interactive.js"></script>
+</body>
+</html>
